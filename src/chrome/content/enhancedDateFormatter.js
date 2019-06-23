@@ -16,7 +16,7 @@ EnhancedDateFormatter.getDateFormatForDate = function (date) {
     var dateDay = Math.floor(date.valueOf()/86400000);
     
     if (EnhancedDateFormatter.preferences.getValue('useCustomFormatForLastWeek', false) &&
-        dateDay > (todayDay-7)) {
+        dateDay > (todayDay-6)) {
         dateFormat = EnhancedDateFormatter.preferences.getValue('lastWeekDateFormat', '');            
     }
     if (EnhancedDateFormatter.preferences.getValue('useCustomFormatForYesterday', false) &&
