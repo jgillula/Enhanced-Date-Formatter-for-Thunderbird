@@ -67,8 +67,15 @@
 
         <description style="font-weight: bold">Note: To view your changes, you may need to restart Thunderbird.</description>
         
-        <hbox>
-          <label id="label_defaultDateFormat" control="textbox_defaultDateFormat" value="Default date format:" />
+        <hbox align="center">
+          <vbox>
+            <label id="label_defaultDateFormat" control="textbox_defaultDateFormat">
+              Default date format:
+            </label>
+            <description id="description_defaultDateFormat">
+              (For any date not covered by one of the conditions below)
+            </description>
+          </vbox>
           <textbox id="textbox_defaultDateFormat" preference="extensions.enhancedDateFormatter.defaultDateFormat"/>
         </hbox>
 

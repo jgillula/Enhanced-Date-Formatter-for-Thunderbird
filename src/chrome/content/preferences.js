@@ -11,7 +11,7 @@ function setDisabledOrEnabled(ids, value) {
 }
 
 EnhancedDateFormatter.adjustDisabledStates = function() {
-    setDisabledOrEnabled(["label_defaultDateFormat", "textbox_defaultDateFormat",
+    setDisabledOrEnabled(["label_defaultDateFormat", "description_defaultDateFormat", "textbox_defaultDateFormat",
                           "checkbox_useCustomFormatForToday",
                           "checkbox_useCustomFormatForYesterday",
                           "checkbox_useCustomFormatForLastWeek"],

@@ -12,8 +12,14 @@ EnhancedDateFormatter.getDateFormatForDate = function (date) {
     // January 1, 1970, UTC, and there are 86400000 in a day, so
     // to get the number of days, just divide by 86400000 and
     // floor the result
-    var todayDay = Math.floor((new Date()).valueOf()/86400000);
-    var dateDay = Math.floor(date.valueOf()/86400000);
+
+    // Additionally, in order to correct for the timezone (so we're
+    // not getting day numbers in UTC), we need to subtract off the
+    // timezone offset (which is given in minutes, so we need to
+    // multiply by 60000 to get milliseconds)
+    var todayDate = new Date();
+    var todayDay = Math.floor((todayDate.valueOf()-todayDate.getTimezoneOffset()*60000)/86400000);
+    var dateDay = Math.floor((date.valueOf()-date.getTimezoneOffset()*60000)/86400000);
     
     if (EnhancedDateFormatter.preferences.getValue('useCustomFormatForLastWeek', false) &&
         dateDay > (todayDay-6)) {
