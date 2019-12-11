@@ -1,3 +1,16 @@
+Preferences.addAll([
+    { id: "extensions.enhancedDateFormatter.useCustomFormatsForDateColumn", type: "bool" },
+    { id: "extensions.enhancedDateFormatter.useCustomFormatsForReceivedColumn", type: "bool" },
+    { id: "extensions.enhancedDateFormatter.useCustomFormatsForMessagePane", type: "bool" },
+    { id: "extensions.enhancedDateFormatter.defaultDateFormat", type: "string" },
+    { id: "extensions.enhancedDateFormatter.useCustomFormatForToday", type: "bool" },
+    { id: "extensions.enhancedDateFormatter.todayDateFormat", type: "string" },
+    { id: "extensions.enhancedDateFormatter.useCustomFormatForYesterday", type: "bool" },
+    { id: "extensions.enhancedDateFormatter.yesterdayDateFormat", type: "string" },
+    { id: "extensions.enhancedDateFormatter.useCustomFormatForLastWeek", type: "bool" },
+    { id: "extensions.enhancedDateFormatter.lastWeekDateFormat", type: "string" },
+]);
+
 function setDisabledOrEnabled(ids, value) {
     if(value) {
         for (let id of ids) {

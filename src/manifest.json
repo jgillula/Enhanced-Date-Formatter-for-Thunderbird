@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Enhanced Date Formatter",
+  "version": "1.0.1",
+  "author": "Jeremy Gillula",
+  "homepage_url": "https://github.com/jgillula/Enhanced-Date-Formatter-for-Thunderbird",
+  "description": "Configure the 'Date' and 'Received' columns and displayed date in the message pane using custom formats.",
+  "applications": {
+    "gecko": {
+      "id": "enhanceddateformatter@jeremy.gillula",
+      "strict_min_version": "63"
+    }
+  },
+  "legacy": {
+    "type": "xul",
+    "options": {
+      "page": "chrome://enhanceddateformatter/content/preferences.xul"
+    }
+  },
+  "icons": {
+    "32": "chrome/content/icon.png"
+  }
+}
