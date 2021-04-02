@@ -76,7 +76,7 @@ EnhancedDateFormatter.strftime = function(sFormat, date) {
                 '%H': zeroPad(nHour, 2),
                 '%I': zeroPad((nHour+11)%12 + 1, 2),
                 '%j': zeroPad(aDayCount[nMonth] + nDate + ((nMonth>1 && isLeapYear()) ? 1 : 0), 3),
-                '%k': nHour,
+                '%k': nHour.toString(),
                 '%l': (nHour+11)%12 + 1,
                 '%m': zeroPad(nMonth + 1, 2),
                 '%n': nMonth + 1,
